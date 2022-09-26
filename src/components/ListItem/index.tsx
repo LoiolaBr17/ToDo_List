@@ -1,10 +1,16 @@
 import * as C from './styles';
+import { Item } from '../../types/item'
 
-const ListItem = () => {
+type Props = {
+    item: Item
+}
+
+const ListItem = ({item}: Props) => {
 
     return (
         <C.Container>
-           
+            <input type="checkbox"/>
+            <label>{item.name}</label>
         </C.Container>
     );
 }
